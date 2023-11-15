@@ -1,4 +1,6 @@
-# How do you add two random variables following uniform distributions? Or more generally, two random variables with arbitrary distribution?
+# How do you add two random variables following uniform distributions? Or more generally, two random variables with arbitrary distribution? 
+# Inspired by https://www.hackerrank.com/challenges/random-number-generator/problem
+
 import numpy as np
 import matplotlib.pyplot as plt
 
