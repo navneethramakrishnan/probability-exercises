@@ -1,7 +1,6 @@
 # How do you add two random variables following uniform distributions? Or more generally, two random variables with arbitrary distribution?
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import simps
 
 def convolution(f, g, x_range, delta):
     result = np.convolve(f(x_range), g(x_range), mode = 'full')*delta
