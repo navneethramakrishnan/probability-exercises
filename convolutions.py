@@ -11,14 +11,15 @@ def uniform_dist(x, a):
     return np.where((x >= 0) & (x <= a), 1/a, 0)
 
 # Set the range of x values, y values and constants
-steps = 10001 #Numerical precision depends on this. The extra step is to keep clean numbers in x_range and y_range
+steps = 100001 #Numerical precision depends on this. The extra step is to keep clean numbers in x_range and y_range
 x_lim_low = -5
 x_lim_upp = 5
-delta = (x_range[-1] - x_range[0])/steps
 a1 = 1
 a2 = 1
 x_range = np.linspace(x_lim_low, x_lim_upp, steps)
 y_range = np.linspace(2*x_lim_low, 2*x_lim_upp, 2*steps - 1) 
+delta = (x_range[-1] - x_range[0])/steps
+
 
 # Perform convolution
 convolution_pdf = convolution(lambda x: uniform_dist(x, a1), lambda x: uniform_dist(x, a2), x_range, delta)
